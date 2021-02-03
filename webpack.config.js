@@ -9,6 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // 打包後的檔案路徑及 dist 資料夾
     filename: 'js/[name].js', // 打包後的 js 檔名
   },
+  resolve: {
+    // alias: {
+    //   '%': path.resolve(__dirname, './src'),
+    // },
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
@@ -54,10 +60,10 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     port: 3000,
-    open: true,
     hot: true,
     compress: false,
     clientLogLevel: 'silent',
+    historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'dist'),
   },
   optimization: {

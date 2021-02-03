@@ -1,0 +1,11 @@
+.navbar-brand {
+  > a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(212, 154, 154);
+      transition: color 1s;
+    }
+  }
+}

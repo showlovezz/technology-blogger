@@ -7,6 +7,7 @@ import '../assets/scss/all.scss'
 import Navigation from './commons/Navigation'
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Navigation />

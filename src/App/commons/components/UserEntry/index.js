@@ -1,9 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
-import { Container } from 'react-bootstrap'
 
 export const StyledSection = styled.section`
-  background-image: linear-gradient(to ${props => props.page === 'login' ? 'right' : 'left' }, #D500F9, #FFD54F);
+  background-image: linear-gradient(to ${props => props.page === 'login' ? 'right' : 'left'}, #D500F9, #FFD54F);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -75,7 +73,7 @@ export const StyledUserLink = styled.div`
 `
 
 export const StyledDescBlock = styled.div`
-  background-image: linear-gradient(to ${props => props.page === 'login' ? 'left' : 'right' }, #D500F9, #FFD54F);
+  background-image: linear-gradient(to ${props => props.page === 'login' ? 'left' : 'right'}, #D500F9, #FFD54F);
   width: 50%;
 
   @media (max-width: 768px) {

@@ -11,7 +11,7 @@ import {
   StyledUserLink,
   StyledDescBlock,
   StyledDescCard,
-  StyledDescBody
+  StyledDescBody,
 } from '../../commons/components/UserEntry'
 
 import './styles.scss'
@@ -32,7 +32,7 @@ const UserLogin = () => {
                       <Form.Label>Email address</Form.Label>
                       <Form.Control type='email' placeholder='Enter email' />
                       <Form.Text className='text-muted'>
-                        We'll never share your email with anyone else.
+                        We will never share your email with anyone else.
                       </Form.Text>
                     </Form.Group>
                     <Form.Group controlId='formBasicPassword' className='mb-5'>
@@ -45,7 +45,7 @@ const UserLogin = () => {
                   </Form>
                 </StyledFormGroup>
                 <StyledUserLink>
-                  <p>Haven't an account ?</p>
+                  <p>Have not an account ?</p>
                   <button>Sign Up</button>
                 </StyledUserLink>
               </StyledFormBody>

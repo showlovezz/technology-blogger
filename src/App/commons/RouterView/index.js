@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import LoaderView from '../../commons/LoaderView'
 
@@ -23,6 +23,7 @@ const RouterView = () => {
             )
           })
         }
+        <Route render={() => <Redirect to={{ pathname: '/technologyList' }} />} />
       </Switch>
     </Suspense>
   )

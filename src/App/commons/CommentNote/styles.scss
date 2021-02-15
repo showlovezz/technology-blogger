@@ -1,0 +1,64 @@
+.comment {
+  .comment-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .comment-item {
+      width: 85%;
+      margin-bottom: 20px;
+      display: flex;
+    }
+  }
+}
+
+.comment {
+  .comment-item {
+    .item-img {
+      max-width: 80px;
+      max-height: 80px;
+      margin-right: 10px;
+    }
+    .item-body {
+      &__meta {
+        margin-bottom: 5px;
+
+        .meta-author {
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #8f8f8f;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            position: relative;
+            top: -3px;
+          }
+        }
+        .meta-date {
+          font-weight: 500;
+          font-size: 12px;
+          color: #687a86;
+        }
+      }
+      &__description {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.comment {
+  .comment-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &__body {
+      width: 85%;
+      text-align: right;
+    }
+  }
+}

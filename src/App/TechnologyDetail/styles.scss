@@ -1,0 +1,63 @@
+.blogger-detail {
+  .detail-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      width: 85%;
+      min-height: 500px;
+    }
+  }
+}
+
+.blogger-detail {
+  .detail-body {
+    .item-card {
+      &__title,
+      &__meta,
+      &__img {
+        margin-bottom: 5px;
+      }
+      &__meta {
+        color: #8f8f8f;
+        font-size: 14px;
+
+        .meta-author,
+        .meta-date,
+        .meta-comment {
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #8f8f8f;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            position: relative;
+            top: -3px;
+          }
+        }
+      }
+      &__tags {
+        display: flex;
+        align-items: center;
+
+        .tags-option + .tags-option {
+          margin-left: 5px;
+        }
+      }
+      &__link {
+        color: #5FCB71;
+        background-color: transparent;
+      }
+      .meta-author {
+        b {
+          color: #347ea8;
+        }
+      }
+    }
+  }
+}

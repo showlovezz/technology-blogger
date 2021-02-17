@@ -10,14 +10,16 @@ import { DEFAULT_SIZE } from '../const'
 
 const UserCard = ({ user }) => {
   const {
-    user_name,
-    user_avatar,
-    job_title,
-    github_link,
-    facebook_link,
-    twitter_link,
-    instagram_link,
-    post_count,
+    fields: {
+      user_name,
+      user_avatar,
+      job_title,
+      github_link,
+      facebook_link,
+      twitter_link,
+      instagram_link,
+      post_count,
+    },
   } = user
 
   return (

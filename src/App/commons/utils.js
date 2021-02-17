@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 import photo943Size from '../../assets/img/placeholder-943x395.png'
 import photo110Size from '../../assets/img/placeholder-110x110.png'
 import photo100Size from '../../assets/img/placeholder-100x100.png'
@@ -35,4 +37,34 @@ export const currentPicture = (picture_url, size) => {
   }
 
   return pictureRrl
+}
+
+export const stringToArray = (value) => {
+  if (Array.isArray(value)) return value
+  if (typeof value !== 'string' || value === '') return []
+  return value.split(',').map((v) => v.trim())
+}
+
+export const DATETIME_FORMAT = 'YYYY/MM/DD HH:mm:ss'
+export const STANDARD_OUTPUT_TIME_FORMAT = 'YYYY/MM/DD HH:mm'
+export const STANDARD_DATETIME_FORMAT = 'YYYY/MM/DD HH:mm:ss'
+
+export const formatDatetime = (str, options = {}) => {
+  const {
+    format = STANDARD_DATETIME_FORMAT,
+    isUTC = false,
+  } = options
+  if (!str) {
+    return ''
+  }
+
+  if (isUTC) {
+    return moment.utc(str, DATETIME_FORMAT).local().format(format)
+  }
+
+  return moment(str, DATETIME_FORMAT).format(format)
+}
+
+export const formatTimeWithoutSecs = (dateString, options = {}) => {
+  return formatDatetime(dateString, { ...options, format: STANDARD_OUTPUT_TIME_FORMAT })
 }

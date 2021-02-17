@@ -20,7 +20,7 @@ const useFetchUserList = () => {
     fetchData()
   }, [fetchData])
 
-  return [userList, setUserList, fetchStatus]
+  return [userList, fetchStatus]
 }
 
 export default useFetchUserList

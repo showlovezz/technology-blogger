@@ -20,7 +20,7 @@ const useFetchTechnologyList = () => {
     fetchData()
   }, [fetchData])
 
-  return [technologyList, setTechnologyList, fetchStatus]
+  return [technologyList, fetchStatus]
 }
 
 export default useFetchTechnologyList

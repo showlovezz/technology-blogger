@@ -1,12 +1,18 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 
+import LoadingView from '../commons/LoadingView'
+
 import useFetchUserList from './hooks/useFetchUserList'
 import UserCard from './components/UserCard'
 import './styles.scss'
 
 const UserList = () => {
-  const [userList] = useFetchUserList()
+  const [userList, fetchStatus] = useFetchUserList()
+
+  if (fetchStatus === 'Loading') {
+    return <LoadingView />
+  }
 
   return (
     <section className='user-area'>

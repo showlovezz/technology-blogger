@@ -7,13 +7,13 @@ import { currentPicture, stringToArray, formatTimeWithoutSecs } from '../../../A
 
 const TechnologyCard = ({ datum }) => {
   const {
+    id,
     fields: {
-      id,
       title,
       description,
       comment_count,
       publish_date,
-      picture_url,
+      list_picture_url,
       author,
       share_count,
       tags,
@@ -25,7 +25,7 @@ const TechnologyCard = ({ datum }) => {
 
   return (
     <div className='blogger-list__item'>
-      <img className='img-fluid item-img' src={currentPicture(picture_url)} />
+      <img className='img-fluid item-img' src={currentPicture(list_picture_url)} />
       <div className='item-body'>
         <h3>{title}</h3>
         <div className='item-body__meta'>

@@ -24,7 +24,7 @@ const TechnologyDetail = () => {
           <SingleTechnology technology={technology} setTechnology={setTechnology} />
         </Container>
       </section>
-      <CommentNote />
+      <CommentNote technology={technology} />
     </>
   )
 }

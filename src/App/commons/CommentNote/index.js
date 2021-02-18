@@ -1,12 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Container } from 'react-bootstrap'
+
+import LoadingView from '../LoadingView'
 
 import CommentCard from './components/CommentCard'
 import CommentForm from './components/CommentForm'
-import fakeCommentList from './data/fakeCommentList'
+import useFetchCommentList from './hooks/useFetchCommentList'
 import './styles.scss'
 
-const CommentNote = () => {
+const CommentNote = ({ technology }) => {
+  const { fields: { comments } } = technology
+  const [commentList, fetchStatus] = useFetchCommentList(comments)
+
+  if (fetchStatus === 'Loading') {
+    return <LoadingView />
+  }
+
   return (
     <section className='comment'>
       <Container>
@@ -15,7 +25,7 @@ const CommentNote = () => {
         </div>
         <div className='comment-block'>
           {
-            fakeCommentList.map((comment, index) => {
+            commentList.map((comment, index) => {
               return (
                 <CommentCard comment={comment} key={index} />
               )
@@ -25,6 +35,10 @@ const CommentNote = () => {
       </Container>
     </section>
   )
+}
+
+CommentNote.propTypes = {
+  technology: PropTypes.object,
 }
 
 export default CommentNote

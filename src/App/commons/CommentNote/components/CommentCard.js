@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { currentPicture } from '../../utils'
+import { currentPicture, formatTimeWithoutSecs } from '../../utils'
 
 import { DEFAULT_SIZE } from '../const'
 
 const CommentCard = ({ comment }) => {
   const {
-    user_avatar,
-    user_name,
-    comment_date,
-    user_comment,
+    fields: {
+      user_avatar,
+      user_name,
+      comment_date,
+      user_comment,
+    },
   } = comment
 
   return (
@@ -19,7 +21,7 @@ const CommentCard = ({ comment }) => {
       <div className='item-body'>
         <div className='item-body__meta'>
           <span className='meta-author'><b>{user_name}</b></span>
-          <span className='meta-date'>{comment_date}</span>
+          <span className='meta-date'>{formatTimeWithoutSecs(comment_date)}</span>
         </div>
         <p className='item-body__description'>{user_comment}</p>
       </div>

@@ -50,8 +50,20 @@
         }
       }
       &__link {
-        color: #5FCB71;
-        background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+
+        .web-link {
+          a {
+            color: #5FCB71;
+            background-color: transparent;
+          }
+        }
+        .share-link {
+          button + button {
+            margin-left: 5px;
+          }
+        }
       }
       .meta-author {
         b {

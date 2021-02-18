@@ -3,7 +3,18 @@ import PropTypes from 'prop-types'
 import { Badge } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import { currentPicture, stringToArray, formatTimeWithoutSecs } from '../../commons/utils'
+import {
+  StyledFacebookBtn,
+  StyledTwitterBtn,
+  StyledLinkedinBtn,
+  StyledRedditBtn,
+  StyledEmailBtn,
+} from '../../commons/ShareIcon'
+import {
+  currentPicture,
+  stringToArray,
+  formatTimeWithoutSecs,
+} from '../../commons/utils'
 
 import { DEFAULT_SIZE } from '../const'
 
@@ -18,7 +29,7 @@ const SingleTechnology = ({ technology }) => {
       detail_picture_url,
       description,
       tags,
-      share_link,
+      web_link,
     },
   } = technology
 
@@ -48,7 +59,18 @@ const SingleTechnology = ({ technology }) => {
               })
             }
           </div>
-          <Link className='item-card__link' target = '_blank' to={{ pathname: share_link }}>Website Link →</Link>
+          <div className='item-card__link'>
+            <div className='web-link'>
+              <Link target = '_blank' to={{ pathname: web_link }}>Website Link →</Link>
+            </div>
+            <div className='share-link'>
+              <StyledFacebookBtn link={web_link} />
+              <StyledTwitterBtn link={web_link} />
+              <StyledLinkedinBtn link={web_link} />
+              <StyledRedditBtn link={web_link} />
+              <StyledEmailBtn link={web_link} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

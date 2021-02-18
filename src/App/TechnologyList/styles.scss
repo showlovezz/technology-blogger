@@ -63,6 +63,11 @@
       color: #4f4f4f;
       font-size: 15px;
       margin-bottom: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
     &__tags {
       display: flex;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 
 import {
   StyledSection,
@@ -18,6 +19,11 @@ import { GoogleButton } from '../../commons/OAuthButton'
 import './styles.scss'
 
 const UserLogin = () => {
+  const history = useHistory()
+  const handleLinkSignUpPage = () => {
+    history.push('/signUp')
+  }
+
   return (
     <StyledSection page='login'>
       <Container>
@@ -47,7 +53,7 @@ const UserLogin = () => {
                 </StyledFormGroup>
                 <StyledUserLink>
                   <p>Have not an account ?</p>
-                  <button>Sign Up</button>
+                  <button onClick={handleLinkSignUpPage}>Sign Up</button>
                 </StyledUserLink>
                 <GoogleButton />
               </StyledFormBody>

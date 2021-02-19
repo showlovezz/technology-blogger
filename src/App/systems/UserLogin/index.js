@@ -13,6 +13,7 @@ import {
   StyledDescCard,
   StyledDescBody,
 } from '../../commons/components/UserEntry'
+import { GoogleButton } from '../../commons/OAuthButton'
 
 import './styles.scss'
 
@@ -24,8 +25,8 @@ const UserLogin = () => {
           <StyledFormBlock>
             <StyledFormCard>
               <StyledFormBody>
-                <h3>User Login</h3>
-                <p>Please input to your account</p>
+                <h3 className='user-form__title'>User Login</h3>
+                <p className='user-form__subtitle'>Please input to your account</p>
                 <StyledFormGroup>
                   <Form className='user-input-group'>
                     <Form.Group controlId='formBasicEmail'>
@@ -48,6 +49,7 @@ const UserLogin = () => {
                   <p>Have not an account ?</p>
                   <button>Sign Up</button>
                 </StyledUserLink>
+                <GoogleButton />
               </StyledFormBody>
             </StyledFormCard>
           </StyledFormBlock>

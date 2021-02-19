@@ -30,7 +30,8 @@ export const StyledFormCard = styled.div`
 export const StyledFormBody = styled.div`
   width: 70%;
 
-  h3,p {
+  .user-form__title,
+  .user-form__subtitle {
     text-align: center;
     margin-bottom: 60px;
   }

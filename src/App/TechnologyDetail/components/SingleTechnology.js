@@ -24,7 +24,7 @@ const SingleTechnology = ({ technology }) => {
       title,
       author,
       publish_date,
-      comment_count,
+      comments,
       share_count,
       detail_picture_url,
       description,
@@ -43,7 +43,7 @@ const SingleTechnology = ({ technology }) => {
           <div className='item-card__meta'>
             <span className='meta-author'>By&nbsp;<b>{author}</b></span>
             <span className='meta-date'>{formatTimeWithoutSecs(publish_date)}</span>
-            <span className='meta-comment'>{comment_count} comments</span>
+            <span className='meta-comment'>{comments.length} comments</span>
             <span className='meta-share'>{share_count} shares</span>
           </div>
           <img className='item-card__img img-fluid' src={currentPicture(detail_picture_url, DEFAULT_SIZE)} />

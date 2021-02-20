@@ -11,7 +11,7 @@ const TechnologyCard = ({ datum }) => {
     fields: {
       title,
       description,
-      comment_count,
+      comments,
       publish_date,
       list_picture_url,
       author,
@@ -31,7 +31,7 @@ const TechnologyCard = ({ datum }) => {
         <div className='item-body__meta'>
           <span className='meta-author'>By&nbsp;<b>{author}</b></span>
           <span className='meta-date'>{formatTimeWithoutSecs(publish_date)}</span>
-          <span className='meta-comment'>{comment_count} comments</span>
+          <span className='meta-comment'>{comments.length} comments</span>
           <span className='meta-share'>{share_count} shares</span>
         </div>
         <div className='item-body__intro'>{description}</div>

@@ -33,7 +33,7 @@ export const StyledFormBody = styled.div`
   .user-form__title,
   .user-form__subtitle {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   p {
@@ -53,6 +53,7 @@ export const StyledUserLink = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 
   p {
     margin-bottom: 0;

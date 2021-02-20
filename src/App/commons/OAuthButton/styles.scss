@@ -1,0 +1,28 @@
+.fb-button {
+  .facebook-button {
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 054);
+    box-shadow: 0px 2px 2px 0px rgba(219, 214, 214, 24%), 0px 0px 1px 0px rgba(0, 0, 0, 24%);
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+
+    &:hover {
+      opacity: 0.9;
+      box-shadow: 1px 3px 3px 1px rgba(219, 214, 214, 24%), 0px 0px 1px 0px rgba(0, 0, 0, 24%);
+    }
+  }
+  i {
+    margin-right: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 2px;
+    color: blue;
+    font-size: 20px;
+  }
+}

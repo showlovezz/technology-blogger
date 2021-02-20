@@ -17,6 +17,7 @@
 .env.production.local
 apiKey.js
 clientId.js
+app_id.js
 
 npm-debug.log*
 yarn-debug.log*

@@ -14,7 +14,7 @@ import {
   StyledDescCard,
   StyledDescBody,
 } from '../../commons/components/UserEntry'
-import { GoogleButton } from '../../commons/OAuthButton'
+import { GoogleButton, FBButton } from '../../commons/OAuthButton'
 
 import './styles.scss'
 
@@ -55,7 +55,10 @@ const UserLogin = () => {
                   <p>Have not an account ?</p>
                   <button onClick={handleLinkSignUpPage}>Sign Up</button>
                 </StyledUserLink>
-                <GoogleButton />
+                <div className='d-flex justify-content-between'>
+                  <GoogleButton />
+                  <FBButton />
+                </div>
               </StyledFormBody>
             </StyledFormCard>
           </StyledFormBlock>

@@ -3,7 +3,7 @@ import GoogleLogin from 'react-google-login'
 import FacebookLogin from 'react-facebook-login'
 
 import { GOOGLE_CLIENT_ID } from '../../../../clientId'
-import { APP_ID } from '../../../../appId'
+import { APP_ID } from '../../../../appKey'
 
 import './styles.scss'
 

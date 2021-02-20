@@ -15,9 +15,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
-apiKey.js
-clientId.js
-appKey.js
+# apiKey.js
+# clientId.js
+# appKey.js
 
 npm-debug.log*
 yarn-debug.log*

@@ -1,8 +1,6 @@
 import Axios from 'axios'
 
-import { apiKey } from '../../../apiKey'
-
-const headers = { Authorization: `Bearer ${apiKey}` }
+const headers = { Authorization: `Bearer ${process.env.REACT_APP_API_KEY}` }
 
 export const fetchTechnologyList = () => {
   const url = 'https://api.airtable.com/v0/app142LlsAaBEYVw4/technologies?maxRecords=6&view=Grid%20view'

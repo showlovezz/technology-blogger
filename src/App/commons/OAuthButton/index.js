@@ -2,9 +2,6 @@ import React from 'react'
 import GoogleLogin from 'react-google-login'
 import FacebookLogin from 'react-facebook-login'
 
-import { GOOGLE_CLIENT_ID } from '../../../../clientId'
-import { APP_ID } from '../../../../appKey'
-
 import './styles.scss'
 
 export const GoogleButton = () => {
@@ -15,7 +12,7 @@ export const GoogleButton = () => {
   return (
     <div className='google-button'>
       <GoogleLogin
-        clientId={GOOGLE_CLIENT_ID}
+        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText='Sign in with Google'
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
@@ -33,7 +30,7 @@ export const FBButton = () => {
   return (
     <div className='fb-button'>
       <FacebookLogin
-        appId={APP_ID}
+        appId={process.env.REACT_APP_APP_ID}
         fields='name,email,picture'
         callback={responseFacebook}
         cssClass='facebook-button'

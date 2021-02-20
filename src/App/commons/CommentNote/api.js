@@ -1,11 +1,8 @@
 import Axios from 'axios'
 
-import { apiKey } from '../../../../apiKey'
+const headers = { Authorization: `Bearer ${process.env.REACT_APP_API_KEY}` }
 
-const headers = { Authorization: `Bearer ${apiKey}` }
-
-export const fetchComment = (id) => {
-  // if (!id) return null
+export const fetchComment = () => {
   const url = 'https://api.airtable.com/v0/app142LlsAaBEYVw4/comments?view=Grid%20view'
 
   return Axios.get(url, { headers })

@@ -1,0 +1,59 @@
+.loading-view {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.user-area .user-card {
+  display: flex;
+  box-shadow: 1px 1px 1px 1px #cccccc;
+  margin-bottom: 20px; }
+  .user-area .user-card .user-profile {
+    width: 65%; }
+  .user-area .user-card .user-stats {
+    width: 35%; }
+
+.user-area .user-profile {
+  background-color: #f8f9fa;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .user-area .user-profile__img {
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 5px; }
+  .user-area .user-profile h5 {
+    margin-bottom: 0;
+    line-height: 1; }
+  .user-area .user-profile p {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #8f8f8f; }
+  .user-area .user-profile__icon span + span {
+    margin-left: 10px; }
+  .user-area .user-profile__icon span a {
+    color: #8f8f8f; }
+    .user-area .user-profile__icon span a:hover {
+      color: #91ce89; }
+
+.user-area .user-stats {
+  background-color: #467ac7;
+  opacity: 0.6;
+  padding: 10px; }
+
+.user-area .user-stats__post {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .user-area .user-stats__post h5 {
+    margin-bottom: 0px;
+    color: #fff; }
+  .user-area .user-stats__post p {
+    font-size: 13px;
+    color: #ffc107; }
+

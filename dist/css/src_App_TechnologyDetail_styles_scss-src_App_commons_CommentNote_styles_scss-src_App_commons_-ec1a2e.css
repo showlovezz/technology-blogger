@@ -1,0 +1,97 @@
+.loading-view {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.comment .comment-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .comment .comment-block .comment-item {
+    width: 85%;
+    margin-bottom: 20px;
+    display: flex; }
+
+.comment .comment-item .item-img {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 10px; }
+
+.comment .comment-item .item-body__meta {
+  margin-bottom: 5px; }
+  .comment .comment-item .item-body__meta .meta-author::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -3px; }
+  .comment .comment-item .item-body__meta .meta-date {
+    font-weight: 500;
+    font-size: 12px;
+    color: #687a86; }
+
+.comment .comment-item .item-body__description {
+  margin-bottom: 0; }
+
+.comment .comment-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+  .comment .comment-form__body {
+    width: 85%;
+    text-align: right; }
+
+.blogger-detail .detail-body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center; }
+  .blogger-detail .detail-body__item {
+    width: 85%;
+    min-height: 500px; }
+
+.blogger-detail .detail-body .item-card__title, .blogger-detail .detail-body .item-card__meta, .blogger-detail .detail-body .item-card__img {
+  margin-bottom: 5px; }
+
+.blogger-detail .detail-body .item-card__meta {
+  color: #8f8f8f;
+  font-size: 14px; }
+  .blogger-detail .detail-body .item-card__meta .meta-author::after,
+  .blogger-detail .detail-body .item-card__meta .meta-date::after,
+  .blogger-detail .detail-body .item-card__meta .meta-comment::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -3px; }
+
+.blogger-detail .detail-body .item-card__tags {
+  display: flex;
+  align-items: center; }
+  .blogger-detail .detail-body .item-card__tags .tags-option + .tags-option {
+    margin-left: 5px; }
+
+.blogger-detail .detail-body .item-card__link {
+  display: flex;
+  justify-content: space-between; }
+  .blogger-detail .detail-body .item-card__link .web-link a {
+    color: #5FCB71;
+    background-color: transparent; }
+  .blogger-detail .detail-body .item-card__link .share-link button + button {
+    margin-left: 5px; }
+
+.blogger-detail .detail-body .item-card .meta-author b {
+  color: #347ea8; }
+

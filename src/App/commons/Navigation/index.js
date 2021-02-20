@@ -39,6 +39,7 @@ const Navigation = () => {
       <div className='nav-scroller py-1 mb-2'>
         <nav className='nav d-flex justify-content-between'>
           <Link className='p-2 text-muted' to='/technologyList'>Technology List</Link>
+          <Link className='p-2 text-muted' to='/trainingGroupList'>TrainingGroup List</Link>
           <Link className='p-2 text-muted' to='/userList'>User List</Link>
           {/* <a className='p-2 text-muted' href='#'>U.S.</a>
           <a className='p-2 text-muted' href='#'>Technology</a>

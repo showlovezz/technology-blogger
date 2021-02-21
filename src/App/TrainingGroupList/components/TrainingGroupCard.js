@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Badge } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import { currentPicture, stringToArray, formatTimeWithoutSecs } from '../../../App/commons/utils'
+import { currentPicture, formatTimeWithoutSecs } from '../../../App/commons/utils'
 
 const TrainingGroupCard = ({ datum }) => {
   const {
@@ -16,11 +16,10 @@ const TrainingGroupCard = ({ datum }) => {
       list_picture_url,
       author,
       share_count,
-      tags,
+      category,
     },
   } = datum
 
-  const tagList = stringToArray(tags)
   const url = `/technologyList/${id}`
 
   return (
@@ -35,14 +34,8 @@ const TrainingGroupCard = ({ datum }) => {
           <span className='meta-share'>{share_count} shares</span>
         </div>
         <div className='item-body__intro'>{description}</div>
-        <div className='item-body__tags'>Tags&nbsp;
-          {
-            tagList.map((tag, index) => {
-              return (
-                <Badge className='tags-option' variant='dark' key={index}>{tag}</Badge>
-              )
-            })
-          }
+        <div className='item-body__tags'>Tags：
+          <Badge className='tags-option' variant='dark'>{category}</Badge>
         </div>
         <Link className='item-body__link' to={url}>Read more →</Link>
       </div>

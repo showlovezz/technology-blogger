@@ -10,11 +10,7 @@ import {
   StyledRedditBtn,
   StyledEmailBtn,
 } from '../../commons/ShareIcon'
-import {
-  currentPicture,
-  stringToArray,
-  formatTimeWithoutSecs,
-} from '../../commons/utils'
+import { currentPicture, formatTimeWithoutSecs } from '../../commons/utils'
 
 import { DEFAULT_SIZE } from '../const'
 
@@ -28,12 +24,10 @@ const SingleTechnology = ({ technology }) => {
       share_count,
       detail_picture_url,
       description,
-      tags,
       web_link,
+      category,
     },
   } = technology
-
-  const tagList = stringToArray(tags)
 
   return (
     <div className='detail-body'>
@@ -50,14 +44,8 @@ const SingleTechnology = ({ technology }) => {
           <div className='item-card__desc'>
             {description}
           </div>
-          <div className='item-card__tags'>Tags：&nbsp;
-            {
-              tagList.map((tag, index) => {
-                return (
-                  <Badge className='tags-option' variant='dark' key={index}>{tag}</Badge>
-                )
-              })
-            }
+          <div className='item-card__tags'>Tags：
+            <Badge className='tags-option' variant='dark'>{category}</Badge>
           </div>
           <div className='item-card__link'>
             <div className='web-link'>
